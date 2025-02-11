@@ -1,0 +1,180 @@
+
+
+.collage-container {
+  background-color: black;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevent overflow during animation */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust minmax value to control image size */
+  gap: 12px; /* Corrected gap unit from '12x' to '12px' */
+  padding: 30px;
+  width: 90vw;
+  transition: transform 1s ease; /* Smooth flip transition */
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 1s ease, transform 1s ease;
+  border-radius: 8px;
+}
+
+.enter-from-0 {
+  animation: flyInFromLeft 2s forwards ease-out;
+}
+
+.enter-from-1 {
+  animation: flyInFromRight 2s forwards ease-out;
+}
+
+.enter-from-2 {
+  animation: flyInFromTop 2s forwards ease-out;
+}
+
+.enter-from-3 {
+  animation: flyInFromBottom 2s forwards ease-out;
+}
+
+/* Keyframe Animations for images flying from different directions */
+@keyframes flyInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100vw) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes flyInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100vw) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes flyInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-100vh) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes flyInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(100vh) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Fade-out effect for each image */
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+/* Transition to black background and show title */
+.black-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/form1.jpg);
+  background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 3rem;
+  font-family: Arial, sans-serif;
+  opacity: 0;
+  animation: fadeInText 1.5s forwards ease;
+}
+.black-background h1{
+  font-family: Italiana;
+  text-align: center;
+}
+
+.typewriter-text {
+  font-size: 2rem;
+  margin-top: 30px;
+  font-family: Italiana;
+  color: #c5beb4;
+  overflow: hidden;              /* Ensures the text is hidden initially */
+  white-space: nowrap;           /* Prevents the text from wrapping */
+  width: 0;                      /* Starting point for animation */
+  animation: typing 5s steps(50, end) forwards; /* Adjust typing speed and steps */
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; } /* Adjust width according to text length or adjust speed in animation */
+}
+
+/* Flip animation */
+.flip-out {
+  animation: flipOut 1s forwards ease;
+}
+
+@keyframes flipOut {
+  from {
+    transform: perspective(1000px) rotateY(0deg); /* Start position */
+  }
+  to {
+    transform: perspective(1000px) rotateY(-90deg); /* End position */
+  }
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.line{
+  color: white;
+}
+.navbar {
+  display: flex;               /* Use flex to align items */
+  justify-content: flex-end;   /* Align items to the right */
+  width: 100%;                /* Full width to use flex effectively */
+  position: absolute;          /* Absolute to position at the top */
+  top: 10px;                  /* Space from the top */
+  padding-right: 20px;        /* Space from the right */
+}
+.btn4{
+  margin: 20px;
+}
+.btn4:hover{
+  border: 1px solid white;
+}

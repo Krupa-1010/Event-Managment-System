@@ -1,0 +1,95 @@
+/* EventDetail.css */
+.event-detail-container {
+    background-image: url(./images/form2.jpg); 
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;/* Black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+  }
+  
+  .event-detail-card {
+    background-color: transparent; /* Dark gray background for the card */
+    color: #fff;
+    padding: 30px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); 
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid black; 
+  }
+  
+  .event-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white; 
+    font-family: Italiana;
+  }
+  
+  .eventdetail-poster {
+    width: 50%;
+    height: auto;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  .event-description, .event-info {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #ccc; /* Lighter color for text */
+    text-align: center;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+  }
+  
+  .custom-button {
+    background-color: transparent; /* Red for buttons */
+    color: white;
+    border: 1px solid white;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-button:hover {
+    background-color: white; 
+    color: black;/* Darker red on hover */
+  }
+  
+  .custom-button:focus {
+    outline: none;
+  }
+  
+  @media (max-width: 768px) {
+    .event-detail-card {
+      padding: 20px;
+    }
+  
+    .event-title {
+      font-size: 2rem;
+    }
+  
+    .event-description, .event-info {
+      font-size: 1rem;
+    }
+  
+    .custom-button {
+      font-size: 0.9rem;
+      padding: 10px 15px;
+    }
+  }
+  

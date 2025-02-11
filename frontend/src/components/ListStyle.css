@@ -1,0 +1,62 @@
+/* Main container for the participant list */
+.list-container {
+    padding: 20px;
+    background-image: url('./images/back3.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Table container for applying background to the table area */
+  .table-container {
+    background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styled table */
+  .styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Table header styles */
+  .styled-table thead tr {
+    background-color: black;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  /* Table body row styles */
+  .styled-table tbody tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Table cell styles */
+  .styled-table th,
+  .styled-table td {
+    padding: 12px 15px;
+    border: 1px solid grey;
+  }
+  
+  /* Hover effect on table rows */
+  .styled-table tbody tr:hover {
+    background-color: #f2f2f2;
+  }
+  
+  /* Table title styling */
+  .table-title {
+    color: white;
+    margin-bottom: 30px;
+    font-size:3rem;
+    text-align: center;
+    font-family: Italiana;
+  }
+  

@@ -1,0 +1,137 @@
+body {
+  background-color: black;
+}
+
+.text2 h1 {
+  padding: 60px;
+  color: #fff;
+  font-size: 7rem;
+  margin-left: 30px;
+}
+
+span {
+  color: black;
+  font-size: 50px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  font-size: 7rem;
+}
+
+.animated-text {
+  display: flex;
+  flex-wrap: wrap;  /* Enable wrapping */
+  justify-content: center;  /* Center-align the items */
+  gap: 40px; /* Space between items */
+  margin-top: 60px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0; /* Hidden initially */
+  color: black; /* Initial black text */
+  text-shadow: 2px 2px 0 white, -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white; /* White border */
+  position: relative;
+  width: 45%; /* Ensure two items per line */
+  text-align: center;
+  transition: color 1s ease-in-out, opacity 0.8s ease-in-out, text-shadow 1s ease-in-out; /* Smooth transitions */
+}
+
+.item img {
+  width: 100px; /* Image size */
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.item h3 {
+  font-size: 5rem;
+  font-weight: bold;
+  font-family: Italiana;
+}
+
+.visible {
+  opacity: 1; /* Show when visible */
+}
+
+/* Animation for flying in from the left */
+@keyframes fly-in-left {
+  0% {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+/* Animation for flying in from the right */
+@keyframes fly-in-right {
+  0% {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+/* Color and border transition animation */
+@keyframes color-transition {
+  0% {
+      color: black; /* Start with black */
+      text-shadow: 2px 2px 0 white, -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white; /* White border */
+  }
+  100% {
+      color: #c5beb4; /* Transition to gold */
+      text-shadow: none; /* Remove white border */
+  }
+}
+
+/* Individual item animations */
+.item1 {
+  animation: fly-in-left 1s forwards, color-transition 1s 1s forwards;
+}
+
+.item2 {
+  animation: fly-in-right 1s 0.5s forwards, color-transition 1s 1.5s forwards;
+}
+
+.item3 {
+  animation: fly-in-left 1s 1s forwards, color-transition 1s 2s forwards;
+}
+
+.item4 {
+  animation: fly-in-right 1s 1.5s forwards, color-transition 1s 2.5s forwards;
+}
+
+.item5 {
+  animation: fly-in-left 1s 2s forwards, color-transition 1s 3s forwards;
+}
+
+.button-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+}
+
+.btn3 {
+  padding: 10px;
+  background-color: #fff;
+  color: black;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn3:hover {
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+}

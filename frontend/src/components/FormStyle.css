@@ -1,0 +1,70 @@
+.hero{
+    background-image: url(./images/form1.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.form1{
+    border: white 1px solid;
+    
+}
+.hero h1{
+    color: white;
+    margin: 10px;
+    font-family: Italiana;
+}
+.btn{
+    font-weight: bold;
+}
+textarea{
+    background-color: transparent;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    color:  #c5beb4;
+    
+}
+label{
+    color: #c5beb4;
+    font-size: 12px;
+    padding-bottom: 5px;
+}
+
+/* General styling for the input container */
+.input-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  /* Calendar input styling */
+  .calender {
+    background-color: #000000; /* Black background */
+    color: #c5beb4; /* White text */
+    padding: 10px;
+    border: 1px solid #dcb9b9; /* White border */
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+    
+  }
+  
+  /* Position the FontAwesome calendar icon */
+  .calendar-icon {
+    position: absolute;
+    right: 2px;
+    top: 40%;
+    transform: translateY(-50%);
+    color: #c5beb4;
+    font-size: 15px;
+    pointer-events: none;
+  }
+  .current-poster{
+    color: #c5beb4;
+  }
